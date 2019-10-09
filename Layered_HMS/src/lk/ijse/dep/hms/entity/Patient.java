@@ -80,7 +80,7 @@ public class Patient implements SuperEntity {
 
     @Override
     public String toString() {
-        return "Patient{" +
+        return "PatientDTO{" +
                 "patientid='" + patientid + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +

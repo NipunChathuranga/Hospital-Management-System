@@ -81,7 +81,7 @@ public class Doctor implements SuperEntity {
 
     @Override
     public String toString() {
-        return "Doctor{" +
+        return "DoctorDTO{" +
                 "doctorid='" + doctorid + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +

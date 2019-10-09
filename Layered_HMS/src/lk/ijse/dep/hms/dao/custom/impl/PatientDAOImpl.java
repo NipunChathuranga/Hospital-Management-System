@@ -11,7 +11,7 @@ import java.util.List;
 public class PatientDAOImpl implements PatientDAO {
     @Override
     public List<Patient> findAll() throws Exception {
-        ResultSet rst = CrudUtil.execute("SELECT * FROM Patient");
+        ResultSet rst = CrudUtil.execute("SELECT * FROM PatientDTO");
         List<Patient> patients = new ArrayList<>();
         while (rst.next()) {
             patients.add(new Patient(rst.getString(1),
@@ -27,7 +27,7 @@ public class PatientDAOImpl implements PatientDAO {
 
     @Override
     public Patient find(String s) throws Exception {
-        ResultSet rst = CrudUtil.execute("SELECT * FROM Patient WHERE patientid=?", s);
+        ResultSet rst = CrudUtil.execute("SELECT * FROM PatientDTO WHERE patientid=?", s);
         if (rst.next()) {
             return new Patient(rst.getString(1),
                     rst.getString(2),
@@ -42,24 +42,24 @@ public class PatientDAOImpl implements PatientDAO {
 
     @Override
     public boolean save(Patient entity) throws Exception {
-        return CrudUtil.execute("INSERT INTO Patient VALUES (?,?,?,?,?,?,?)", entity.getPatientid(),
+        return CrudUtil.execute("INSERT INTO PatientDTO VALUES (?,?,?,?,?,?,?)", entity.getPatientid(),
                 entity.getFirstname(), entity.getLastname(), entity.getGender(), entity.getCity(), entity.getEmail(), entity.getPassword());
     }
 
     @Override
     public boolean update(Patient entity) throws Exception {
-        return CrudUtil.execute("UPDATE Patient SET  firstname=?, lastname=? gender=?,city=?,email=?,password=? WHERE patientid=?", entity.getFirstname(),
+        return CrudUtil.execute("UPDATE PatientDTO SET  firstname=?, lastname=? gender=?,city=?,email=?,password=? WHERE patientid=?", entity.getFirstname(),
                 entity.getLastname(), entity.getGender(), entity.getCity(), entity.getEmail(), entity.getPassword(), entity.getPatientid());
     }
 
     @Override
     public boolean delete(String s) throws Exception {
-        return CrudUtil.execute("DELETE FROM Patient WHERE patientid=?", s);
+        return CrudUtil.execute("DELETE FROM PatientDTO WHERE patientid=?", s);
     }
 
     @Override
     public String getLastPatientId() throws Exception {
-        ResultSet resultSet = CrudUtil.execute("SELECT patientid FROM Patient ORDER BY patientid DESC LIMIT 1");
+        ResultSet resultSet = CrudUtil.execute("SELECT patientid FROM PatientDTO ORDER BY patientid DESC LIMIT 1");
         if (resultSet.next()) {
             resultSet.getString(1);
         }
