@@ -1,0 +1,494 @@
+Oct 07, 2019 2:33:33 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 2:35:44 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 2:47:08 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 2:49:50 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:80)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:85)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:33)
+	... 11 more
+
+Oct 07, 2019 2:58:03 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:80)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:85)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\app.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:33)
+	... 11 more
+
+Oct 07, 2019 3:14:12 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:80)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:85)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:33)
+	... 11 more
+
+Oct 07, 2019 3:16:14 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:80)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:85)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:33)
+	... 11 more
+
+Oct 07, 2019 3:40:23 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:80)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:85)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:33)
+	... 11 more
+
+Oct 07, 2019 3:52:28 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:81)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:86)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:34)
+	... 11 more
+
+Oct 07, 2019 3:53:24 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:83)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:88)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:34)
+	... 11 more
+
+Oct 07, 2019 3:57:36 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:04:08 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 4:08:31 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.lang.NullPointerException
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:77)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:82)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at java.util.Properties$LineReader.readLine(Properties.java:434)
+	at java.util.Properties.load0(Properties.java:353)
+	at java.util.Properties.load(Properties.java:341)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:31)
+	... 11 more
+
+Oct 07, 2019 4:09:28 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 4:12:06 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 4:12:35 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 4:15:27 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:79)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:84)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:32)
+	... 11 more
+
+Oct 07, 2019 4:28:48 PM lk.ijse.dep.hms.main.AppInitializer start
+SEVERE: null
+java.lang.RuntimeException: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:104)
+	at lk.ijse.dep.hms.db.DBConnection.getInstance(DBConnection.java:109)
+	at lk.ijse.dep.hms.main.AppInitializer.start(AppInitializer.java:43)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$161(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$174(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$172(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$173(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.FileNotFoundException: resources\application.properties (The system cannot find the path specified)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at lk.ijse.dep.hms.db.DBConnection.<init>(DBConnection.java:29)
+	... 11 more
+
+Oct 07, 2019 4:29:55 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:30:01 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:30:50 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:30:56 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:32:05 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:32:10 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:32:12 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 4:32:13 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:00 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:06 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:08 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:13 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:30 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:33 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:43 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:46 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:50 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:51 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:52 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:54 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:45:56 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:51:51 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:52:51 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:52:53 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 8:52:54 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:01 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:47 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:49 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:50 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:53 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:55 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:34:57 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:12 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:15 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:17 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:18 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:22 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:23 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:27 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:28 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:30 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:31 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:35 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:36 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:37 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:39 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:40 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:42 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:43 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:44 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:45 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:47 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:48 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:49 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:50 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 07, 2019 10:35:51 PM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 08, 2019 11:16:19 AM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 08, 2019 11:16:26 AM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
+Oct 08, 2019 11:16:28 AM javafx.fxml.FXMLLoader$ValueElement processValue
+WARNING: Loading FXML document with JavaFX API of version 8.0.171 by JavaFX runtime of version 8.0.161
