@@ -5,22 +5,22 @@ public class Doctor implements SuperEntity {
     private String doctorid ;
     private String firstname;
     private String lastname;
+    private double fee;
     private String specialization;
     private String email;
     private String password;
-    private double fee;
 
     public Doctor() {
     }
 
-    public Doctor(String doctorid, String firstname, String lastname, String specialization, String email, String password, double fee) {
+    public Doctor(String doctorid, String firstname, String lastname, double fee, String specialization, String email, String password) {
         this.doctorid = doctorid;
         this.firstname = firstname;
         this.lastname = lastname;
+        this.fee = fee;
         this.specialization = specialization;
         this.email = email;
         this.password = password;
-        this.fee = fee;
     }
 
     public String getDoctorid() {
@@ -47,6 +47,14 @@ public class Doctor implements SuperEntity {
         this.lastname = lastname;
     }
 
+    public double getFee() {
+        return fee;
+    }
+
+    public void setFee(double fee) {
+        this.fee = fee;
+    }
+
     public String getSpecialization() {
         return specialization;
     }
@@ -71,24 +79,17 @@ public class Doctor implements SuperEntity {
         this.password = password;
     }
 
-    public double getFee() {
-        return fee;
-    }
-
-    public void setFee(double fee) {
-        this.fee = fee;
-    }
 
     @Override
     public String toString() {
-        return "DoctorDTO{" +
+        return "Doctor{" +
                 "doctorid='" + doctorid + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", fee=" + fee +
                 ", specialization='" + specialization + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
-                ", fee=" + fee +
                 '}';
     }
 }

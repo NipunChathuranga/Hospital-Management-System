@@ -17,14 +17,14 @@ public class DoctorBOImpl implements DoctorBO {
     @Override
     public boolean saveDoctor(DoctorDTO doctor) throws Exception {
 
-        return doctorDAO.save(new Doctor(doctor.getDoctorid(), doctor.getFirstname(), doctor.getLastname(), doctor.getSpecialization(),
-                doctor.getEmail(), doctor.getPassword(), doctor.getFee()));
+        return doctorDAO.save(new Doctor(doctor.getDoctorid(),doctor.getFirstname(),doctor.getLastname(),
+                doctor.getFee(),doctor.getSpecialization(),doctor.getEmail(),doctor.getPassword()));
     }
 
     @Override
     public boolean updateDoctor(DoctorDTO doctor) throws Exception {
-        return doctorDAO.update(new Doctor(doctor.getDoctorid(), doctor.getFirstname(), doctor.getLastname(), doctor.getSpecialization(),
-                doctor.getEmail(), doctor.getPassword(), doctor.getFee()));
+        return doctorDAO.update(new Doctor(doctor.getDoctorid(),doctor.getFirstname(),doctor.getLastname(),
+                doctor.getFee(),doctor.getSpecialization(),doctor.getEmail(),doctor.getPassword()));
     }
 
     @Override
@@ -37,7 +37,8 @@ public class DoctorBOImpl implements DoctorBO {
         List<Doctor> doctors = doctorDAO.findAll();
         List<DoctorDTO> doctorDTOS = new ArrayList<>();
         for (Doctor doctor : doctors) {
-            doctorDTOS.add(new DoctorDTO(doctor.getDoctorid(), doctor.getFirstname(), doctor.getLastname(), doctor.getSpecialization(), doctor.getEmail(), doctor.getPassword(), doctor.getFee()));
+            doctorDTOS.add(new DoctorDTO(doctor.getDoctorid(),doctor.getFirstname(),doctor.getLastname(),
+                    doctor.getFee(),doctor.getSpecialization(),doctor.getEmail(),doctor.getPassword()));
         }
 
         return doctorDTOS;
@@ -52,8 +53,8 @@ public class DoctorBOImpl implements DoctorBO {
     public DoctorDTO findDoctor(String doctorid) throws Exception {
         Doctor doctor = doctorDAO.find(doctorid);
 
-        return new DoctorDTO(doctor.getDoctorid(), doctor.getFirstname(), doctor.getLastname(), doctor.getSpecialization(),
-                doctor.getEmail(), doctor.getPassword(), doctor.getFee());
+        return new DoctorDTO(doctor.getDoctorid(),doctor.getFirstname(),doctor.getLastname(),
+                doctor.getFee(),doctor.getSpecialization(),doctor.getEmail(),doctor.getPassword());
     }
 
     @Override

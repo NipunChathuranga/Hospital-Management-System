@@ -2,6 +2,7 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -25,8 +26,7 @@
             <Font name="Segoe UI" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="txtFieldID" layoutX="583.0" layoutY="287.0" prefHeight="25.0" prefWidth="225.0" />
-      <TextField fx:id="txtFieldPassword" layoutX="583.0" layoutY="326.0" prefHeight="25.0" prefWidth="225.0" />
+      <TextField fx:id="txtFieldID" layoutX="583.0" layoutY="287.0" prefHeight="25.0" prefWidth="225.0" promptText="Username" />
       <JFXButton fx:id="btnAdminLogin" layoutX="625.0" layoutY="372.0" onAction="#btnAdminLogin_OnAction" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #004D40;" text="Login" textFill="#fffdfd">
          <font>
             <Font name="System Bold" size="16.0" />
@@ -37,5 +37,6 @@
             <Image url="@../asset/back.png" />
          </image>
       </ImageView>
+      <PasswordField fx:id="pswrdFieldPassword" layoutX="583.0" layoutY="324.0" prefHeight="25.0" prefWidth="225.0" promptText="Password" />
    </children>
 </AnchorPane>

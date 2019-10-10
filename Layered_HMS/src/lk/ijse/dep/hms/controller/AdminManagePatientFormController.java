@@ -20,5 +20,9 @@ public class AdminManagePatientFormController {
         Stage primaryStage = (Stage) (this.AnchrPaneManagePatient.getScene().getWindow());
         primaryStage.setScene(scene);
         primaryStage.centerOnScreen();
+
+
     }
+
+
 }

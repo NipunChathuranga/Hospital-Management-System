@@ -12,6 +12,7 @@ public class AppoinmentDTO {
     public AppoinmentDTO() {
     }
 
+
     public AppoinmentDTO(String appoinmentid, String patientid, String doctorid, Date appoinmentdate) {
         this.appoinmentid = appoinmentid;
         this.patientid = patientid;
