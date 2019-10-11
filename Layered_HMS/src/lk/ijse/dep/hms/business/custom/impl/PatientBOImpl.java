@@ -1,8 +1,10 @@
 package lk.ijse.dep.hms.business.custom.impl;
 
 import lk.ijse.dep.hms.business.custom.PatientBO;
+import lk.ijse.dep.hms.business.exception.AlreadyExistsInAppoinmentException;
 import lk.ijse.dep.hms.dao.DAOFactory;
 import lk.ijse.dep.hms.dao.DAOTypes;
+import lk.ijse.dep.hms.dao.custom.AppoinmentDAO;
 import lk.ijse.dep.hms.dao.custom.PatientDAO;
 import lk.ijse.dep.hms.dto.PatientDTO;
 import lk.ijse.dep.hms.entity.Patient;
@@ -13,25 +15,30 @@ import java.util.List;
 public class PatientBOImpl implements PatientBO {
 
     private PatientDAO patientDAO = DAOFactory.getInstance().getDAO(DAOTypes.PATIENT);
+    private AppoinmentDAO appoinmentDAO = DAOFactory.getInstance().getDAO(DAOTypes.APPOINMENT);
+
 
     @Override
     public boolean savePatient(PatientDTO patient) throws Exception {
         return patientDAO.save(new Patient(patient.getPatientid(),
                 patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail(),
-                patient.getPassword()));
+                patient.getGender(), patient.getCity(), patient.getEmail()
+        ));
     }
 
     @Override
     public boolean updatePatient(PatientDTO patient) throws Exception {
         return patientDAO.update(new Patient(patient.getPatientid(),
                 patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail(),
-                patient.getPassword()));
+                patient.getGender(), patient.getCity(), patient.getEmail()
+        ));
     }
 
     @Override
     public boolean deletePatient(String patientid) throws Exception {
+        if(appoinmentDAO.existsByPatientID(patientid)){
+            throw new AlreadyExistsInAppoinmentException("Patient already exists in an appoinment, hence unable to delete");
+        }
         return patientDAO.delete(patientid);
     }
 
@@ -42,8 +49,8 @@ public class PatientBOImpl implements PatientBO {
         for (Patient patient : patients) {
             patientDTOS.add(new PatientDTO(patient.getPatientid(),
                     patient.getFirstname(), patient.getLastname(),
-                    patient.getGender(), patient.getCity(), patient.getEmail(),
-                    patient.getPassword()));
+                    patient.getGender(), patient.getCity(), patient.getEmail()
+            ));
         }
 
         return patientDTOS;
@@ -60,8 +67,8 @@ public class PatientBOImpl implements PatientBO {
 
         return new PatientDTO(patient.getPatientid(),
                 patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail(),
-                patient.getPassword());
+                patient.getGender(), patient.getCity(), patient.getEmail()
+        );
     }
 
     @Override

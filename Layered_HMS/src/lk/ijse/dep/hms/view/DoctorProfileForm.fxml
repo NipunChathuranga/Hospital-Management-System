@@ -22,38 +22,38 @@
                   <Image url="@../asset/man.png" />
                </image>
             </ImageView>
-            <TextField layoutX="285.0" layoutY="149.0" prefHeight="34.0" prefWidth="322.0" />
+            <TextField fx:id="txtFieldDoctorID" layoutX="285.0" layoutY="149.0" prefHeight="34.0" prefWidth="322.0" />
             <Label layoutX="112.0" layoutY="193.0" prefHeight="34.0" prefWidth="145.0" text="First Name" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="193.0" prefHeight="34.0" prefWidth="322.0" />
+            <TextField fx:id="txtFieldDoctorFName" layoutX="285.0" layoutY="193.0" prefHeight="34.0" prefWidth="322.0" />
             <Label layoutX="112.0" layoutY="237.0" prefHeight="34.0" prefWidth="145.0" text="Last Name" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="237.0" prefHeight="34.0" prefWidth="322.0" />
+            <TextField fx:id="txtFieldDoctorLName" layoutX="285.0" layoutY="237.0" prefHeight="34.0" prefWidth="322.0" />
             <Label layoutX="112.0" layoutY="281.0" prefHeight="34.0" prefWidth="145.0" text="Specialization" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="281.0" prefHeight="34.0" prefWidth="322.0" />
+            <TextField fx:id="txtFieldDoctorSpecialization" layoutX="285.0" layoutY="281.0" prefHeight="34.0" prefWidth="322.0" />
             <Label layoutX="112.0" layoutY="322.0" prefHeight="34.0" prefWidth="145.0" text="Email" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="322.0" prefHeight="34.0" prefWidth="322.0" />
-            <Label layoutX="112.0" layoutY="365.0" prefHeight="34.0" prefWidth="145.0" text="Fee" textFill="WHITE">
+            <TextField fx:id="txtFieldDoctorEmail" layoutX="285.0" layoutY="322.0" prefHeight="34.0" prefWidth="322.0" />
+            <Label layoutX="112.0" layoutY="365.0" prefHeight="34.0" prefWidth="145.0" text="Fee ( LKR )" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="365.0" prefHeight="34.0" prefWidth="322.0" />
-            <JFXButton layoutX="360.0" layoutY="455.0" prefHeight="34.0" prefWidth="172.0" style="-fx-background-color: #8E24AA;" text="Update" textFill="#fcfafa">
+            <TextField fx:id="txtFieldDoctorFee" layoutX="285.0" layoutY="365.0" prefHeight="34.0" prefWidth="322.0" />
+            <JFXButton fx:id="btnUpdate" layoutX="360.0" layoutY="455.0" onAction="#btnUpdate_OnAction" prefHeight="34.0" prefWidth="172.0" style="-fx-background-color: #8E24AA;" text="Update" textFill="#fcfafa">
                <font>
                   <Font name="Segoe UI Bold" size="16.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="285.0" layoutY="408.0" prefHeight="34.0" prefWidth="322.0" />
+            <TextField fx:id="txtFieldDoctorPassword" layoutX="285.0" layoutY="408.0" prefHeight="34.0" prefWidth="322.0" />
          </children>
       </AnchorPane>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-3.0" prefHeight="97.0" prefWidth="834.0" style="-fx-background-color: #09213E;" text="Hospital Management System | Doctor Profile" textFill="#f2ecec">

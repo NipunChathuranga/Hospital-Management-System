@@ -1,6 +1,6 @@
-package lk.ijse.dep.hms.dto;
+package lk.ijse.dep.hms.util;
 
-public class PatientDTO {
+public class PatientTM {
 
     private String patientid;
     private String firstname;
@@ -9,10 +9,10 @@ public class PatientDTO {
     private String city;
     private String email;
 
-    public PatientDTO() {
+    public PatientTM() {
     }
 
-    public PatientDTO(String patientid, String firstname, String lastname, String gender, String city, String email) {
+    public PatientTM(String patientid, String firstname, String lastname, String gender, String city, String email) {
         this.patientid = patientid;
         this.firstname = firstname;
         this.lastname = lastname;
