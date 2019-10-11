@@ -1,9 +1,11 @@
 package lk.ijse.dep.hms.business.custom.impl;
 
 import lk.ijse.dep.hms.business.custom.MedicineBO;
+import lk.ijse.dep.hms.business.exception.AlreadyExistsInPrescriptionDetailException;
 import lk.ijse.dep.hms.dao.DAOFactory;
 import lk.ijse.dep.hms.dao.DAOTypes;
 import lk.ijse.dep.hms.dao.custom.MedicineDAO;
+import lk.ijse.dep.hms.dao.custom.PrescriptionDetailDAO;
 import lk.ijse.dep.hms.dto.MedicineDTO;
 import lk.ijse.dep.hms.entity.Medicine;
 
@@ -13,6 +15,7 @@ import java.util.List;
 public class MedicineBOImpl implements MedicineBO {
 
     private MedicineDAO medicineDAO = DAOFactory.getInstance().getDAO(DAOTypes.MEDICINE);
+    private PrescriptionDetailDAO prescriptionDetailDAO = DAOFactory.getInstance().getDAO(DAOTypes.PRESCRIPTION_DETAIL);
 
     @Override
     public boolean saveMedicine(MedicineDTO medicine) throws Exception {
@@ -28,6 +31,9 @@ public class MedicineBOImpl implements MedicineBO {
 
     @Override
     public boolean deleteMedicine(String medicineid) throws Exception {
+        if (prescriptionDetailDAO.existsByMedicineID(medicineid)) {
+            throw new AlreadyExistsInPrescriptionDetailException("Medicine already exists in a prescription detail, hence unable to delete");
+        }
         return medicineDAO.delete(medicineid);
     }
 

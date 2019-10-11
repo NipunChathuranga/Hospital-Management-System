@@ -41,7 +41,7 @@ public class MedicineDAOImpl implements MedicineDAO {
 
     @Override
     public boolean update(Medicine entity) throws Exception {
-        return CrudUtil.execute("UPDATE Medicine SET  drugname=?, brandname=? drugtype=? WHERE medicineid=?", entity.getDrugname(),
+        return CrudUtil.execute("UPDATE Medicine SET  drugname=?, brandname=?, drugtype=? WHERE medicineid=?", entity.getDrugname(),
                 entity.getBrandname(), entity.getDrugtype(), entity.getMedicineid());
     }
 
@@ -54,7 +54,7 @@ public class MedicineDAOImpl implements MedicineDAO {
     public String getLastMedicineId() throws Exception {
         ResultSet resultSet = CrudUtil.execute("SELECT medicineid FROM Medicine ORDER BY medicineid DESC LIMIT 1");
         if(resultSet.next()){
-            resultSet.getString(1);
+            return resultSet.getString(1);
         }
 
         return null;

@@ -20,20 +20,20 @@
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="144.0" layoutY="24.0" prefHeight="34.0" prefWidth="203.0" />
+            <TextField fx:id="txtFieldMedicineID" layoutX="144.0" layoutY="24.0" prefHeight="34.0" prefWidth="203.0" />
             <Label layoutX="45.0" layoutY="67.0" prefHeight="34.0" prefWidth="89.0" text="Brand Name" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="144.0" layoutY="67.0" prefHeight="34.0" prefWidth="203.0" />
+            <TextField fx:id="txtFieldBrandName" layoutX="144.0" layoutY="67.0" prefHeight="34.0" prefWidth="203.0" />
             <Label layoutX="390.0" layoutY="27.0" prefHeight="34.0" prefWidth="89.0" text="Drug Name" textFill="WHITE">
                <font>
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <TextField layoutX="494.0" layoutY="23.0" prefHeight="34.0" prefWidth="233.0" />
-            <JFXButton layoutX="493.0" layoutY="117.0" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #004D40;" text="Save" textFill="#fcfafa">
+            <TextField fx:id="txtFieldDrugName" layoutX="494.0" layoutY="23.0" prefHeight="34.0" prefWidth="233.0" />
+            <JFXButton fx:id="btnSave" layoutX="493.0" layoutY="117.0" onAction="#btnSave_OnAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #004D40;" text="Save" textFill="#fcfafa">
                <font>
                   <Font name="Segoe UI Bold" size="16.0" />
                </font>
@@ -43,8 +43,8 @@
                   <Font name="Segoe UI Bold" size="15.0" />
                </font>
             </Label>
-            <JFXComboBox layoutX="493.0" layoutY="66.0" prefHeight="34.0" prefWidth="233.0" style="-fx-background-color: #FAFAFA;" />
-            <TableView layoutX="37.0" layoutY="172.0" prefHeight="301.0" prefWidth="750.0">
+            <JFXComboBox fx:id="cmbMedicineType" layoutX="493.0" layoutY="66.0" prefHeight="34.0" prefWidth="233.0" style="-fx-background-color: #FAFAFA;" />
+            <TableView fx:id="tblViewMedicineDetails" layoutX="37.0" layoutY="172.0" prefHeight="301.0" prefWidth="750.0">
                <columns>
                   <TableColumn prefWidth="140.0" text="Medicine ID" />
                   <TableColumn prefWidth="223.0" text="Drug Name" />
@@ -52,12 +52,12 @@
                   <TableColumn prefWidth="163.0" text="Type" />
                </columns>
             </TableView>
-            <JFXButton layoutX="144.0" layoutY="117.0" prefHeight="34.0" prefWidth="203.0" style="-fx-background-color: #880E4F;" text="New Doctor" textFill="#fcfafa">
+            <JFXButton fx:id="btnNewMedicine" layoutX="144.0" layoutY="117.0" onAction="#btnNewMedicine_OnAction" prefHeight="34.0" prefWidth="203.0" style="-fx-background-color: #880E4F;" text="New Medicine" textFill="#fcfafa">
                <font>
                   <Font name="Segoe UI Bold" size="16.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="615.0" layoutY="117.0" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #b71c1c;" text="Delete" textFill="#fcfafa">
+            <JFXButton fx:id="btnDelete" layoutX="615.0" layoutY="117.0" onAction="#btnDelete_OnAction" prefHeight="34.0" prefWidth="111.0" style="-fx-background-color: #b71c1c;" text="Delete" textFill="#fcfafa">
                <font>
                   <Font name="Segoe UI Bold" size="16.0" />
                </font>
