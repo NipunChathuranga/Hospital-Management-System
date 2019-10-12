@@ -43,9 +43,8 @@ public class DoctorDAOImpl implements DoctorDAO {
 
     @Override
     public boolean update(Doctor entity) throws Exception {
-        return CrudUtil.execute("UPDATE Doctor SET doctorid=?,firstname=?,lastname=?,fee=?,specialization=?,email=?,password=?",
-                entity.getDoctorid(),entity.getFirstname(),entity.getLastname(),entity.getFee(),entity.getSpecialization()
-        ,entity.getEmail(),entity.getPassword());
+        return CrudUtil.execute("UPDATE Doctor SET firstname=?,lastname=?,fee=?,specialization=?,email=?,password=? WHERE doctorid=?",
+                entity.getFirstname(),entity.getLastname(),entity.getFee(),entity.getSpecialization(),entity.getEmail(),entity.getPassword(),entity.getDoctorid());
     }
 
     @Override
@@ -58,7 +57,7 @@ public class DoctorDAOImpl implements DoctorDAO {
 
         ResultSet resultSet = CrudUtil.execute("SELECT doctorid FROM Doctor ORDER BY doctorid DESC LIMIT 1");
         if(resultSet.next()){
-            resultSet.getString(1);
+            return  resultSet.getString(1);
         }
 
         return null;

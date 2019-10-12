@@ -220,7 +220,7 @@ public class AdminManagePatientFormController {
         txtFieldCity.clear();
 
 
-        // Generate a new id
+        // Generate a new patient id
         int maxId = 0;
 
         try {

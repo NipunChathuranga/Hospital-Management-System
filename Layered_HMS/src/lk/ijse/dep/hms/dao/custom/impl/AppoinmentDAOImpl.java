@@ -27,7 +27,7 @@ public class AppoinmentDAOImpl implements AppoinmentDAO {
 
     @Override
     public boolean existsByDoctorID(String doctorid) throws Exception {
-        ResultSet rst =  CrudUtil.execute("SELECT * Appoinment WHERE doctorid=?",doctorid);
+        ResultSet rst =  CrudUtil.execute("SELECT * FROM Appoinment WHERE doctorid=?",doctorid);
         return rst.next();
     }
 
