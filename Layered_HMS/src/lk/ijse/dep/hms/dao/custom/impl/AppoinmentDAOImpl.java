@@ -12,8 +12,9 @@ public class AppoinmentDAOImpl implements AppoinmentDAO {
 
     @Override
     public String getLastAppoinmentID() throws Exception {
-        ResultSet resultSet = CrudUtil.execute("SELECT appoinmentid FROM Appoinment ORDER BY appoinmenid DESC LIMIT 1");
+        ResultSet resultSet = CrudUtil.execute("SELECT appoinmentid FROM Appoinment ORDER BY appoinmentid DESC LIMIT 1");
         if (resultSet.next()) {
+            System.out.println(resultSet.getString(1));
             return resultSet.getString(1);
         }
         return null;
@@ -29,6 +30,18 @@ public class AppoinmentDAOImpl implements AppoinmentDAO {
     public boolean existsByDoctorID(String doctorid) throws Exception {
         ResultSet rst =  CrudUtil.execute("SELECT * FROM Appoinment WHERE doctorid=?",doctorid);
         return rst.next();
+    }
+
+    @Override
+    public List<Appoinment> findAppoinmentsByDoctorID(String doctorid) throws Exception {
+        ResultSet rst =  CrudUtil.execute("SELECT * FROM Appoinment WHERE doctorid=?",doctorid);
+        List<Appoinment> appoinments = new ArrayList<>();
+        while (rst.next()){
+            appoinments.add(new Appoinment(rst.getString(1),rst.getString(2),rst.getString(3),
+                    rst.getDate(4)));
+        }
+
+        return appoinments;
     }
 
     @Override

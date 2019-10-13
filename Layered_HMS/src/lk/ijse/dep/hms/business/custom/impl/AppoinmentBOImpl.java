@@ -67,4 +67,16 @@ public class AppoinmentBOImpl implements AppoinmentBO {
 
         return appoinmenids;
     }
+
+    @Override
+    public List<AppoinmentDTO> findAppoinmentsByDoctorID(String doctorid) throws Exception {
+        List<Appoinment> appoinments = appoinmentDAO.findAppoinmentsByDoctorID(doctorid);
+        List<AppoinmentDTO> appoinmentDTOS = new ArrayList<>();
+        for(Appoinment appoinment:appoinments){
+            appoinmentDTOS.add(new AppoinmentDTO(appoinment.getAppoinmentid(),appoinment.getPatientid(),appoinment.getDoctorid(),
+                    appoinment.getAppoinmentdate()));
+        }
+
+        return appoinmentDTOS;
+    }
 }
