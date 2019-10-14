@@ -17,7 +17,7 @@
       </Label>
       <AnchorPane layoutX="-5.0" layoutY="84.0" prefHeight="523.0" prefWidth="855.0" style="-fx-background-color: #0097A7;">
          <children>
-            <TableView fx:id="tblViewAppoinmentHistory" layoutX="68.0" layoutY="69.0" opacity="0.99" prefHeight="415.0" prefWidth="736.0" style="-fx-background-color: #B0BEC5;">
+            <TableView fx:id="tblViewAppoinmentHistory" layoutX="68.0" layoutY="69.0" opacity="0.99" prefHeight="415.0" prefWidth="736.0">
               <columns>
                 <TableColumn prefWidth="105.0" text=" Appoinment ID" />
                 <TableColumn minWidth="0.0" prefWidth="116.0" text="  Patient ID" />

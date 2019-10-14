@@ -113,8 +113,8 @@ public class AdminManagePatientFormController {
             List<PatientDTO> patientDTOS = patientBO.findAllPatients();
             ObservableList<PatientTM> patientTMObservableList = tblViewPatientDetails.getItems();
             for (PatientDTO patientDTO : patientDTOS) {
-                patientTMObservableList.add(new PatientTM(patientDTO.getPatientid(), patientDTO.getFirstname(), patientDTO.getLastname(),
-                        patientDTO.getGender(), patientDTO.getCity(), patientDTO.getEmail()));
+                patientTMObservableList.add(new PatientTM(patientDTO.getPatientid(), patientDTO.getPatientfirstname(),patientDTO.getPatientlastname(),
+                        patientDTO.getGender(), patientDTO.getCity(),patientDTO.getPatientemail()));
 
             }
 

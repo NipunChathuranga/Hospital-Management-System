@@ -2,6 +2,8 @@ package lk.ijse.dep.hms.business.custom;
 
 import lk.ijse.dep.hms.business.SuperBO;
 import lk.ijse.dep.hms.dto.AppoinmentDTO;
+import lk.ijse.dep.hms.dto.AppoinmentInfoDTO;
+import lk.ijse.dep.hms.dto.AppoinmentInfoDTO2;
 import lk.ijse.dep.hms.entity.Appoinment;
 
 import java.util.List;
@@ -23,5 +25,12 @@ public interface AppoinmentBO extends SuperBO {
     List<String> getAllAppoinmentIDs() throws Exception;
 
     List<AppoinmentDTO> findAppoinmentsByDoctorID(String doctorid) throws Exception;
+
+    List<AppoinmentInfoDTO> getAppoinmentsInfo() throws Exception;
+
+    List<AppoinmentInfoDTO2> getAppoinmentsInfobyDocID(String doctorid) throws Exception;
+
+
+
 
 }

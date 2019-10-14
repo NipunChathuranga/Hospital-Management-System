@@ -13,9 +13,7 @@ import javafx.stage.Stage;
 import lk.ijse.dep.hms.business.BOFactory;
 import lk.ijse.dep.hms.business.BOTypes;
 import lk.ijse.dep.hms.business.custom.AppoinmentBO;
-import lk.ijse.dep.hms.business.custom.PatientBO;
-import lk.ijse.dep.hms.dto.AppoinmentDTO;
-import lk.ijse.dep.hms.dto.PatientDTO;
+import lk.ijse.dep.hms.dto.AppoinmentInfoDTO2;
 import lk.ijse.dep.hms.principle.UserLogin;
 import lk.ijse.dep.hms.util.AppoinmentHistoryTM;
 
@@ -31,7 +29,8 @@ public class DoctorAppoinmentFormController {
     public TableView<AppoinmentHistoryTM> tblViewAppoinmentHistory;
 
     private AppoinmentBO appoinmentBO = BOFactory.getInstance().getBO(BOTypes.APPOINMENT);
-    private PatientBO patientBO = BOFactory.getInstance().getBO(BOTypes.PATIENT);
+    //private PatientBO patientBO = BOFactory.getInstance().getBO(BOTypes.PATIENT);
+
 
     public void initialize() {
 
@@ -44,20 +43,34 @@ public class DoctorAppoinmentFormController {
             tblViewAppoinmentHistory.getColumns().get(4).setCellValueFactory(new PropertyValueFactory<>("gender"));
             tblViewAppoinmentHistory.getColumns().get(5).setCellValueFactory(new PropertyValueFactory<>("email"));
 
-
-            List<AppoinmentDTO> appoinmentDTOS = appoinmentBO.findAppoinmentsByDoctorID(UserLogin.getUserID());
+            List<AppoinmentInfoDTO2> infolist = appoinmentBO.getAppoinmentsInfobyDocID(UserLogin.getUserID());
             ObservableList<AppoinmentHistoryTM> appoinmentHistoryTMS = tblViewAppoinmentHistory.getItems();
 
-            for (AppoinmentDTO appoinmentDTO : appoinmentDTOS) {
-
-                PatientDTO patientDTO = patientBO.findPatient(appoinmentDTO.getPatientid());
-                appoinmentHistoryTMS.add(new AppoinmentHistoryTM(appoinmentDTO.getAppoinmentid(),
-                        appoinmentDTO.getPatientid(),
-                        patientDTO.getFirstname(),
-                        patientDTO.getLastname(),
-                        patientDTO.getGender(),
-                        patientDTO.getEmail()));
+            for (AppoinmentInfoDTO2 appoinmentInfoDTO2 : infolist) {
+                appoinmentHistoryTMS.add(new AppoinmentHistoryTM(appoinmentInfoDTO2.getAppoinmentid(),
+                        appoinmentInfoDTO2.getPatientid(),
+                        appoinmentInfoDTO2.getPatientfname(),
+                        appoinmentInfoDTO2.getPatientlname(),
+                        appoinmentInfoDTO2.getGender(),
+                        appoinmentInfoDTO2.getPatientemail()));
             }
+
+
+//            List<AppoinmentDTO> appoinmentDTOS = appoinmentBO.findAppoinmentsByDoctorID(UserLogin.getUserID());
+//            ObservableList<AppoinmentHistoryTM> appoinmentHistoryTMS = tblViewAppoinmentHistory.getItems();
+//
+//            for (AppoinmentDTO appoinmentDTO : appoinmentDTOS) {
+//
+//                PatientDTO patientDTO = patientBO.findPatient(appoinmentDTO.getPatientid());
+//                appoinmentHistoryTMS.add(new AppoinmentHistoryTM(appoinmentDTO.getAppoinmentid(),
+//                        appoinmentDTO.getPatientid(),
+//                        patientDTO.getPatientfirstname(),
+//                        patientDTO.getPatientlastname(),
+//                        patientDTO.getGender(),
+//                        patientDTO.getPatientemail()));
+//            }
+
+
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Something went wrong, please contact us for the technical support.").show();
             Logger.getLogger("lk.ijse.dep.hms.controller").log(Level.SEVERE, null, e);

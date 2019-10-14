@@ -25,6 +25,7 @@ import lk.ijse.dep.hms.business.custom.AppoinmentBO;
 import lk.ijse.dep.hms.business.custom.DoctorBO;
 import lk.ijse.dep.hms.business.custom.PatientBO;
 import lk.ijse.dep.hms.dto.AppoinmentDTO;
+import lk.ijse.dep.hms.dto.AppoinmentInfoDTO;
 import lk.ijse.dep.hms.dto.DoctorDTO;
 import lk.ijse.dep.hms.dto.PatientDTO;
 import lk.ijse.dep.hms.util.AppoinmentTM;
@@ -107,16 +108,22 @@ public class AdminMakeAppoinmentFormController {
             cmbPatientID.setItems(FXCollections.observableArrayList(patientids));
 
             ObservableList<AppoinmentTM> appoinmentTMS = tblViewAppoinmentDetails.getItems();
-            List<AppoinmentDTO> appoinmentDTOS = appoinmentBO.findAllAppoinments();
-            for (AppoinmentDTO appoinmentDTO : appoinmentDTOS) {
-                DoctorDTO doctorDTO = doctorBO.findDoctor(appoinmentDTO.getDoctorid());
-                PatientDTO patientDTO = patientBO.findPatient(appoinmentDTO.getPatientid());
+            List<AppoinmentInfoDTO> appoinmentInfoDTOS = appoinmentBO.getAppoinmentsInfo();
+            for (AppoinmentInfoDTO appoinmentInfo : appoinmentInfoDTOS) {
 
-                appoinmentTMS.add(new AppoinmentTM(appoinmentDTO.getAppoinmentid(), patientDTO.getPatientid(), patientDTO.getFirstname(),
-                        doctorDTO.getDoctorid(), doctorDTO.getFirstname(), doctorDTO.getSpecialization(), appoinmentDTO.getAppoinmentdate()));
-
-
+                appoinmentTMS.add(new AppoinmentTM(appoinmentInfo.getAppoinmentid(), appoinmentInfo.getPatientid(), appoinmentInfo.getPatientfname(),
+                        appoinmentInfo.getDoctorid(), appoinmentInfo.getFirstname(), appoinmentInfo.getSpecialization(), appoinmentInfo.getAppoinmentdate()));
             }
+//            List<AppoinmentDTO> appoinmentDTOS = appoinmentBO.findAllAppoinments();
+//            for (AppoinmentDTO appoinmentDTO : appoinmentDTOS) {
+//                DoctorDTO doctorDTO = doctorBO.findDoctor(appoinmentDTO.getDoctorid());
+//                PatientDTO patientDTO = patientBO.findPatient(appoinmentDTO.getPatientid());
+//
+//                appoinmentTMS.add(new AppoinmentTM(appoinmentDTO.getAppoinmentid(), patientDTO.getPatientid(),patientDTO.getPatientfirstname(),
+//                        doctorDTO.getDoctorid(), doctorDTO.getFirstname(), doctorDTO.getSpecialization(), appoinmentDTO.getAppoinmentdate()));
+//
+//
+//            }
 
 
         } catch (Exception e) {
@@ -163,7 +170,7 @@ public class AdminMakeAppoinmentFormController {
                 }
                 try {
                     PatientDTO patientDTO = patientBO.findPatient(selectedPatientID);
-                    txtFieldPatientName.setText(patientDTO.getFirstname());
+                    txtFieldPatientName.setText(patientDTO.getPatientfirstname());
                     System.out.println(patientDTO.getGender());
                     txtFieldGender.setText(patientDTO.getGender());
                 } catch (Exception e) {

@@ -21,16 +21,16 @@ public class PatientBOImpl implements PatientBO {
     @Override
     public boolean savePatient(PatientDTO patient) throws Exception {
         return patientDAO.save(new Patient(patient.getPatientid(),
-                patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail()
+                patient.getPatientfirstname(), patient.getPatientlastname(),
+                patient.getGender(), patient.getCity(), patient.getPatientemail()
         ));
     }
 
     @Override
     public boolean updatePatient(PatientDTO patient) throws Exception {
         return patientDAO.update(new Patient(patient.getPatientid(),
-                patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail()
+                patient.getPatientfirstname(), patient.getPatientlastname(),
+                patient.getGender(), patient.getCity(), patient.getPatientemail()
         ));
     }
 
@@ -48,8 +48,8 @@ public class PatientBOImpl implements PatientBO {
         List<PatientDTO> patientDTOS = new ArrayList<>();
         for (Patient patient : patients) {
             patientDTOS.add(new PatientDTO(patient.getPatientid(),
-                    patient.getFirstname(), patient.getLastname(),
-                    patient.getGender(), patient.getCity(), patient.getEmail()
+                    patient.getPatientfname(),patient.getPatientlname(),
+                    patient.getGender(), patient.getCity(),patient.getPatientemail()
             ));
         }
 
@@ -66,8 +66,8 @@ public class PatientBOImpl implements PatientBO {
         Patient patient = patientDAO.find(patientid);
 
         return new PatientDTO(patient.getPatientid(),
-                patient.getFirstname(), patient.getLastname(),
-                patient.getGender(), patient.getCity(), patient.getEmail()
+                patient.getPatientfname(), patient.getPatientlname(),
+                patient.getGender(), patient.getCity(),patient.getPatientemail()
         );
     }
 

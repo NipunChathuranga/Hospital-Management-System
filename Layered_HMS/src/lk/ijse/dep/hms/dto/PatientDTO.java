@@ -3,22 +3,22 @@ package lk.ijse.dep.hms.dto;
 public class PatientDTO {
 
     private String patientid;
-    private String firstname;
-    private String lastname;
+    private String patientfirstname;
+    private String patientlastname;
     private String gender;
     private String city;
-    private String email;
+    private String patientemail;
 
     public PatientDTO() {
     }
 
-    public PatientDTO(String patientid, String firstname, String lastname, String gender, String city, String email) {
+    public PatientDTO(String patientid, String patientfirstname, String patientlastname, String gender, String city, String patientemail) {
         this.patientid = patientid;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.patientfirstname = patientfirstname;
+        this.patientlastname = patientlastname;
         this.gender = gender;
         this.city = city;
-        this.email = email;
+        this.patientemail = patientemail;
     }
 
     public String getPatientid() {
@@ -29,20 +29,20 @@ public class PatientDTO {
         this.patientid = patientid;
     }
 
-    public String getFirstname() {
-        return firstname;
+    public String getPatientfirstname() {
+        return patientfirstname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
+    public void setPatientfirstname(String patientfirstname) {
+        this.patientfirstname = patientfirstname;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getPatientlastname() {
+        return patientlastname;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setPatientlastname(String patientlastname) {
+        this.patientlastname = patientlastname;
     }
 
     public String getGender() {
@@ -61,11 +61,23 @@ public class PatientDTO {
         this.city = city;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPatientemail() {
+        return patientemail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPatientemail(String patientemail) {
+        this.patientemail = patientemail;
+    }
+
+    @Override
+    public String toString() {
+        return "PatientDTO{" +
+                "patientid='" + patientid + '\'' +
+                ", patientfirstname='" + patientfirstname + '\'' +
+                ", patientlastname='" + patientlastname + '\'' +
+                ", gender='" + gender + '\'' +
+                ", city='" + city + '\'' +
+                ", patientemail='" + patientemail + '\'' +
+                '}';
     }
 }

@@ -42,13 +42,13 @@ public class PatientDAOImpl implements PatientDAO {
     @Override
     public boolean save(Patient entity) throws Exception {
         return CrudUtil.execute("INSERT INTO Patient VALUES (?,?,?,?,?,?)", entity.getPatientid(),
-                entity.getFirstname(), entity.getLastname(), entity.getGender(), entity.getCity(), entity.getEmail());
+                entity.getPatientfname(), entity.getPatientlname(), entity.getGender(), entity.getCity(),entity.getPatientemail());
     }
 
     @Override
     public boolean update(Patient entity) throws Exception {
-        return CrudUtil.execute("UPDATE Patient SET  firstname=?, lastname=?, gender=?,city=?,email=? WHERE patientid=?", entity.getFirstname(),
-                entity.getLastname(), entity.getGender(), entity.getCity(), entity.getEmail(), entity.getPatientid());
+        return CrudUtil.execute("UPDATE Patient SET  patientfname=?, patientlname=?, gender=?,city=?, patientemail=? WHERE patientid=?", entity.getPatientfname(),
+               entity.getPatientlname(), entity.getGender(), entity.getCity(),entity.getPatientemail(), entity.getPatientid());
     }
 
     @Override

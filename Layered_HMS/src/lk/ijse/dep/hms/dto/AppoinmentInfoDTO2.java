@@ -1,23 +1,32 @@
-package lk.ijse.dep.hms.entity;
+package lk.ijse.dep.hms.dto;
 
-public class Patient implements SuperEntity {
+public class AppoinmentInfoDTO2 {
+    private String appoinmentid;
     private String patientid;
     private String patientfname;
     private String patientlname;
     private String gender;
-    private String city;
     private String patientemail;
 
-    public Patient() {
+    public AppoinmentInfoDTO2() {
     }
 
-    public Patient(String patientid, String patientfname, String patientlname, String gender, String city, String patientemail) {
+
+    public AppoinmentInfoDTO2(String appoinmentid, String patientid, String patientfname, String patientlname, String gender, String patientemail) {
+        this.appoinmentid = appoinmentid;
         this.patientid = patientid;
         this.patientfname = patientfname;
         this.patientlname = patientlname;
         this.gender = gender;
-        this.city = city;
         this.patientemail = patientemail;
+    }
+
+    public String getAppoinmentid() {
+        return appoinmentid;
+    }
+
+    public void setAppoinmentid(String appoinmentid) {
+        this.appoinmentid = appoinmentid;
     }
 
     public String getPatientid() {
@@ -52,14 +61,6 @@ public class Patient implements SuperEntity {
         this.gender = gender;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     public String getPatientemail() {
         return patientemail;
     }
@@ -68,15 +69,14 @@ public class Patient implements SuperEntity {
         this.patientemail = patientemail;
     }
 
-
     @Override
     public String toString() {
-        return "Patient{" +
-                "patientid='" + patientid + '\'' +
+        return "AppoinmentInfoDTO2{" +
+                "appoinmentid='" + appoinmentid + '\'' +
+                ", patientid='" + patientid + '\'' +
                 ", patientfname='" + patientfname + '\'' +
                 ", patientlname='" + patientlname + '\'' +
                 ", gender='" + gender + '\'' +
-                ", city='" + city + '\'' +
                 ", patientemail='" + patientemail + '\'' +
                 '}';
     }
