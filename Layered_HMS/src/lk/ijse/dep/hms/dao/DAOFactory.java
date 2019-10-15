@@ -28,7 +28,7 @@ public class DAOFactory {
             case MEDICINE:
                 return (T) new MedicineDAOImpl();
             case PRESCRIPTION:
-                return (T) new PatientDAOImpl();
+                return (T) new PrescriptionDAOImpl();
             case PRESCRIPTION_DETAIL:
                 return (T) new PrescriptionDetailDAOImpl();
             case QUERY:

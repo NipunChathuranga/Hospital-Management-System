@@ -1,21 +1,21 @@
 CREATE TABLE patient(
 	patientid VARCHAR(10) PRIMARY KEY,
-	firstname VARCHAR(15),
-	lastname VARCHAR(20),
+	patientfname VARCHAR(15),
+	patientlname VARCHAR(20),
 	gender CHAR(1),
 	city VARCHAR(10),
-	email VARCHAR(20),
-	password VARCHAR(15)
+	patientemail VARCHAR(20)
+
 );
 
 
 CREATE TABLE doctor(
 	doctorid VARCHAR(10) PRIMARY KEY,
 	firstname VARCHAR(15),
-	lastname VARCHAR(20),
+	lastname VARCHAR(40),
 	fee decimal(10,2),
-	specialization VARCHAR(15),
-	email VARCHAR(20),
+	specialization VARCHAR(40),
+	email VARCHAR(40),
 	password VARCHAR(15)
 );
 
@@ -45,8 +45,8 @@ ON DELETE CASCADE ON UPDATE CASCADE
 
 CREATE TABLE medicine(
 	medicineid VARCHAR(10) PRIMARY KEY,
-	drugname VARCHAR(15),
-	brandname VARCHAR(20),
+	drugname VARCHAR(30),
+	brandname VARCHAR(30),
 	drugtype VARCHAR(10)
 );
 

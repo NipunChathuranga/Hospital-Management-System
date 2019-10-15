@@ -7,14 +7,24 @@ public class PrescriptionDTO {
 
     private String prescriptionid;
     private String appoinmentid;
+    private Date prescriptiondate;
+
+    public PrescriptionDTO(String prescriptionid, String appoinmentid, Date prescriptiondate) {
+        this.prescriptionid = prescriptionid;
+        this.appoinmentid = appoinmentid;
+        this.prescriptiondate = prescriptiondate;
+    }
+
     private List<PrescriptionDetailDTO> prescriptionDetails;
+
 
     public PrescriptionDTO() {
     }
 
-    public PrescriptionDTO(String prescriptionid, String appoinmentid, List<PrescriptionDetailDTO> prescriptionDetails) {
+    public PrescriptionDTO(String prescriptionid, String appoinmentid, Date prescriptiondate, List<PrescriptionDetailDTO> prescriptionDetails) {
         this.prescriptionid = prescriptionid;
         this.appoinmentid = appoinmentid;
+        this.prescriptiondate = prescriptiondate;
         this.prescriptionDetails = prescriptionDetails;
     }
 
@@ -34,6 +44,14 @@ public class PrescriptionDTO {
         this.appoinmentid = appoinmentid;
     }
 
+    public Date getPrescriptiondate() {
+        return prescriptiondate;
+    }
+
+    public void setPrescriptiondate(Date prescriptiondate) {
+        this.prescriptiondate = prescriptiondate;
+    }
+
     public List<PrescriptionDetailDTO> getPrescriptionDetails() {
         return prescriptionDetails;
     }
@@ -42,11 +60,13 @@ public class PrescriptionDTO {
         this.prescriptionDetails = prescriptionDetails;
     }
 
+
     @Override
     public String toString() {
         return "PrescriptionDTO{" +
                 "prescriptionid='" + prescriptionid + '\'' +
                 ", appoinmentid='" + appoinmentid + '\'' +
+                ", prescriptiondate=" + prescriptiondate +
                 ", prescriptionDetails=" + prescriptionDetails +
                 '}';
     }

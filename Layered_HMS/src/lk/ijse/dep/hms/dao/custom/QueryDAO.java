@@ -11,7 +11,7 @@ public interface QueryDAO extends SuperDAO {
 
     List<CustomEntity> getAppoinmentsInfoByDocID(String doctorid) throws Exception;
 
-
+    List<CustomEntity> getPrescriptionHistoryByDocID(String doctorid) throws Exception;
 
 
 

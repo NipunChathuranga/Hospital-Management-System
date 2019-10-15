@@ -1,9 +1,11 @@
 package lk.ijse.dep.hms.business.custom.impl;
 
 import lk.ijse.dep.hms.business.custom.AppoinmentBO;
+import lk.ijse.dep.hms.business.exception.AlreadyExistsInAppoinmentException;
 import lk.ijse.dep.hms.dao.DAOFactory;
 import lk.ijse.dep.hms.dao.DAOTypes;
 import lk.ijse.dep.hms.dao.custom.AppoinmentDAO;
+import lk.ijse.dep.hms.dao.custom.PrescriptionDAO;
 import lk.ijse.dep.hms.dao.custom.QueryDAO;
 import lk.ijse.dep.hms.dto.AppoinmentDTO;
 import lk.ijse.dep.hms.dto.AppoinmentInfoDTO;
@@ -18,6 +20,7 @@ public class AppoinmentBOImpl implements AppoinmentBO {
 
     private AppoinmentDAO appoinmentDAO = DAOFactory.getInstance().getDAO(DAOTypes.APPOINMENT);
     private QueryDAO queryDAO = DAOFactory.getInstance().getDAO(DAOTypes.QUERY);
+    private PrescriptionDAO prescriptionDAO = DAOFactory.getInstance().getDAO(DAOTypes.PRESCRIPTION);
     @Override
     public boolean saveAppoinment(AppoinmentDTO appoinment) throws Exception {
         return appoinmentDAO.save(new Appoinment(appoinment.getAppoinmentid(), appoinment.getPatientid(), appoinment.getDoctorid(),
@@ -32,6 +35,9 @@ public class AppoinmentBOImpl implements AppoinmentBO {
 
     @Override
     public boolean deleteAppoinent(String appoinmentid) throws Exception {
+        if(prescriptionDAO.existsByAppoinmentID(appoinmentid)){
+            throw new AlreadyExistsInAppoinmentException("Appoinment already exists in an prescription, hence unable to delete");
+        }
         return appoinmentDAO.delete(appoinmentid);
     }
 

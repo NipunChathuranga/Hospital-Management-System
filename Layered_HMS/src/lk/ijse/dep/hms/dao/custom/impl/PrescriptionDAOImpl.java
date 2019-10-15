@@ -14,10 +14,16 @@ public class PrescriptionDAOImpl implements PrescriptionDAO {
     public String getLastPrescriptionId() throws Exception {
         ResultSet resultSet = CrudUtil.execute("SELECT prescriptionid FROM Prescription ORDER BY prescriptionid DESC LIMIT 1");
         if (resultSet.next()) {
-            resultSet.getString(1);
+            return resultSet.getString(1);
         }
 
         return null;
+    }
+
+    @Override
+    public boolean existsByAppoinmentID(String appoinmentid) throws Exception {
+        ResultSet resultSet = CrudUtil.execute("SELECT * FROM Prescription WHERE appoinmentid=?",appoinmentid);
+        return resultSet.next();
     }
 
     @Override
@@ -58,4 +64,8 @@ public class PrescriptionDAOImpl implements PrescriptionDAO {
     public boolean delete(String s) throws Exception {
         return CrudUtil.execute("DELETE FROM Prescription WHERE prescriptionid=?", s);
     }
+
+
+
+
 }

@@ -24,18 +24,26 @@ import lk.ijse.dep.hms.business.BOTypes;
 import lk.ijse.dep.hms.business.custom.AppoinmentBO;
 import lk.ijse.dep.hms.business.custom.DoctorBO;
 import lk.ijse.dep.hms.business.custom.PatientBO;
+import lk.ijse.dep.hms.db.DBConnection;
 import lk.ijse.dep.hms.dto.AppoinmentDTO;
 import lk.ijse.dep.hms.dto.AppoinmentInfoDTO;
 import lk.ijse.dep.hms.dto.DoctorDTO;
 import lk.ijse.dep.hms.dto.PatientDTO;
 import lk.ijse.dep.hms.util.AppoinmentTM;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
 import java.text.DecimalFormat;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -322,12 +330,19 @@ public class AdminMakeAppoinmentFormController {
                         cmbDocID.getSelectionModel().getSelectedItem(), txtFieldDocName.getText(), txtFieldSpecialization.getText(), Date.valueOf(txtFieldAppoinmentDate.getText())));
 
                 tblViewAppoinmentDetails.refresh();
-                btnNewAppoinment_OnAction(event);
+
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information");
                 alert.setHeaderText(null);
                 alert.setContentText("Appoinment Done !!");
                 alert.showAndWait();
+                JasperReport jasperReport = (JasperReport) JRLoader.loadObject(this.getClass().getResourceAsStream("/lk/ijse/dep/hms/report/MakeAppoinmentJasper.jasper"));
+                Map<String, Object> params = new HashMap<>();
+                params.put("appid", txtFieldAppoinmentID.getText());
+                JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, params, DBConnection.getInstance().getConnection());
+                JasperViewer.viewReport(jasperPrint, false);
+                btnNewAppoinment_OnAction(event);
+
 
             } catch (Exception e) {
                 new Alert(Alert.AlertType.ERROR, "Something went wrong, please contact us for technical support.").show();

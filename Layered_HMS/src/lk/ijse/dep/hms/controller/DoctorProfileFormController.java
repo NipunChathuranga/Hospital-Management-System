@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import lk.ijse.dep.hms.business.BOFactory;
 import lk.ijse.dep.hms.business.BOTypes;
 import lk.ijse.dep.hms.business.custom.DoctorBO;
+import lk.ijse.dep.hms.business.custom.PrescriptionBO;
 import lk.ijse.dep.hms.dto.DoctorDTO;
 import lk.ijse.dep.hms.principle.UserLogin;
 

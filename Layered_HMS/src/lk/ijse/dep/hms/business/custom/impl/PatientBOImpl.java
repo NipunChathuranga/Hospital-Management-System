@@ -2,6 +2,7 @@ package lk.ijse.dep.hms.business.custom.impl;
 
 import lk.ijse.dep.hms.business.custom.PatientBO;
 import lk.ijse.dep.hms.business.exception.AlreadyExistsInAppoinmentException;
+import lk.ijse.dep.hms.business.exception.AlreadyExistsInPrescriptionException;
 import lk.ijse.dep.hms.dao.DAOFactory;
 import lk.ijse.dep.hms.dao.DAOTypes;
 import lk.ijse.dep.hms.dao.custom.AppoinmentDAO;
@@ -37,7 +38,7 @@ public class PatientBOImpl implements PatientBO {
     @Override
     public boolean deletePatient(String patientid) throws Exception {
         if(appoinmentDAO.existsByPatientID(patientid)){
-            throw new AlreadyExistsInAppoinmentException("Patient already exists in an appoinment, hence unable to delete");
+            throw new AlreadyExistsInPrescriptionException("Patient already exists in an appoinment, hence unable to delete");
         }
         return patientDAO.delete(patientid);
     }
